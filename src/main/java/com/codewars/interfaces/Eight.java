@@ -1,4 +1,5 @@
 package com.codewars.interfaces;
 
-public class Eight {
+public interface Eight {
+    int[] reflectPoint(int[] p, int[] q);
 }
