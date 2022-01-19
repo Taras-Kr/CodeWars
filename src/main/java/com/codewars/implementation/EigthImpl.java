@@ -8,4 +8,12 @@ public class EigthImpl implements Eight {
     public char getChar(int c) {
         return (char)c;
     }
+
+    @Override
+    public String fakeBin(String numberString) {
+        String result = numberString;
+        result = result.replaceAll("[01234]", "0");
+        result = result.replaceAll("[56789]", "1");
+        return result;
+    }
 }

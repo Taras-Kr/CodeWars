@@ -14,4 +14,16 @@ public class ConsoleScanner implements Scanner{
             }
         }
     }
+
+    @Override
+    public String readString() {
+        while(true) {
+            System.out.print("Input string: ");
+            if (sc.hasNext()) {
+                return sc.next();
+            } else {
+                System.out.println("Bad string! Try again.");
+            }
+        }
+    }
 }
