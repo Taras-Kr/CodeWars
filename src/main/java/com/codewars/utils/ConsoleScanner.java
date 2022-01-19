@@ -5,8 +5,7 @@ public class ConsoleScanner implements Scanner{
 
     @Override
     public int readInt() {
-        while(true) {
-            System.out.print("Input integer number: ");
+        while (true) {
             if (sc.hasNextInt()) {
                 return sc.nextInt();
             } else {
@@ -17,8 +16,7 @@ public class ConsoleScanner implements Scanner{
 
     @Override
     public String readString() {
-        while(true) {
-            System.out.print("Input string: ");
+        while (true) {
             if (sc.hasNext()) {
                 return sc.next();
             } else {
