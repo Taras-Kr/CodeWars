@@ -2,8 +2,7 @@ package com.codewars;
 
 import com.codewars.implementation.EigthImpl;
 import com.codewars.utils.ConsoleScanner;
-
-import java.util.Scanner;
+import com.codewars.utils.Description;
 
 public class MainAppl {
 
@@ -12,6 +11,7 @@ public class MainAppl {
         EigthImpl eigth = new EigthImpl();
         ConsoleScanner scanner = new ConsoleScanner();
         //
+        System.out.println(Description.GET_CHAR.getDetail());
         int number  = scanner.readInt();
         System.out.println("Char - " + eigth.getChar(number));
     }
