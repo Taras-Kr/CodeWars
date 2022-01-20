@@ -21,4 +21,9 @@ public class EigthImpl implements Eight {
     public int doubleInteger(int i) {
         return 2*i;
     }
+
+    @Override
+    public int multiply(int num1, int num2) {
+        return num1*num2;
+    }
 }

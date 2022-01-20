@@ -36,6 +36,16 @@ public class Runner {
         System.out.println("Double integer - " + eight.doubleInteger(number));
     }
 
+    public void difficult_8_multiply() {
+        System.out.println("\n\t#Description:\n" + MULTYPLY.getDetail());
+        System.out.print("Input first integer number: ");
+        int number1 = scanner.readInt();
+        System.out.print("Input second integer number: ");
+        int number2 = scanner.readInt();
+        eight = new EigthImpl();
+        System.out.println("Multiply numbers - " + eight.multiply(number1, number2));
+    }
+
     public void difficult_7_stringMerge(){
         System.out.println("\n\t#Description:\n" + STRING_MERGE.getDetail());
         System.out.print("Input first word: ");
