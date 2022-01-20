@@ -18,7 +18,7 @@ public class Menu {
     }
 
     public int selectDifficulty(){
-        System.out.print("#Select  task difficulty\n");
+        System.out.print("\n\t#Select  task difficulty\nSelect difficulty:\n");
         System.out.print("\t8. Difficulty #8\n" +
                 "\t7. Difficulty #7\n" +
                 "\t0. Main Menu\n" +
@@ -29,18 +29,34 @@ public class Menu {
     }
 
     public void difficultyEight() {
-        System.out.println("\t#Select task:\n");
-        System.out.print("1. Get character from ASCII Value\n" +
-                "2. Fake Binary\n" +
-                "0. Select another difficulty\n" +
-                "Input:");
+        System.out.println("\n\t\t#Difficulty 8.\nSelect task:");
+        System.out.print("\t1. Get character from ASCII Value\n" +
+                "\t2. Fake Binary\n" +
+                "\t0. Select another difficulty\n");
+    }
+
+    public boolean runTask(Runnable[] tasks) {
+        System.out.print("Input task number: ");
+        int taskNumber = scanner.readInt();
+        while (true) {
+            if (taskNumber == 0) {
+                return false;
+            }
+            if (taskNumber >= 0 && taskNumber <= tasks.length) {
+                tasks[taskNumber - 1].run();
+                return true;
+            } else {
+                System.out.print("Incorrect task number. Try again.\n" +
+                        "Input task number: ");
+            }
+        }
     }
 
     public void run() {
         menu:
         while(true) {
-            System.out.println("\t\t##Code Wars");
-            System.out.print("#Press:\n" +
+            System.out.println("\n\t\t##Code Wars");
+            System.out.print("\t#Menu:\nSelect option:\n" +
                     "\t1. Select difficulty\n" +
                     "\t2. Exit\n" +
                     "Input: ");
@@ -48,19 +64,22 @@ public class Menu {
             int taskNumber = 0;
             switch (menuItem) {
                 case 1:
-                    int difficulty  = selectDifficulty();
+                    int difficulty = selectDifficulty();
                     selectDifficulty:
                     while (true) {
                         switch (difficulty) {
-
                             case 8:
                                 difficultyEight();
-                                taskNumber = scanner.readInt();
-                                difficultyEightMethods[taskNumber-1].run();
-                                System.out.print("Try another task? (Y or N)");
-                                String answer = scanner.readString();
+                                while (runTask(difficultyEightMethods)) {
+                                    System.out.print("Try another task? (Y or N)");
+                                    String answer = scanner.readString();
+                                    if ((answer.toUpperCase()).equals("N")) {
+                                        break;
+                                    } else {
+                                        difficultyEight();
+                                    }
+                                }
                                 break selectDifficulty;
-
                             case 7:
                                 break;
                             case 0:
