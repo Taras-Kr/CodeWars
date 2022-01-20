@@ -13,6 +13,8 @@ public enum Description {
             "\n" + "Note: input will never be an empty string\n", "8", ""),
     DOUBLE_INTEGER("doubleInteger", "Code as fast as you can! You need to double the integer and return it.",
             "8", "https://www.codewars.com/kata/you-cant-code-under-pressure-number-1/"),
+    MULTYPLY("multiply", "Implement a function which multiplies two numbers.",
+            "8", "https://www.codewars.com/kata/function-3-multiplying-two-numbers/"),
     STRING_MERGE("stringMerge", "Given two words and a letter, return a single\n" +
             "word that's a combination of both words, merged at the point where the given letter\n" +
             "first appears in each word. The returned word should have the beginning of the first\n" +
