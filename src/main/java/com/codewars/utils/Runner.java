@@ -32,7 +32,12 @@ public class Runner {
         System.out.println("\n\t#Description:\n" + STRING_MERGE.getDetail());
         System.out.print("Input first word: ");
         String firstWord = scanner.readString();
+        System.out.print("Input second word: ");
+        String secondWord = scanner.readString();
+        System.out.print("Input letter: ");
+        char letter = scanner.readString().charAt(0);
         seven = new SevenImpl();
+        System.out.println("Merged string - "+ seven.stringMerge(firstWord, secondWord, letter));
 
     }
 
