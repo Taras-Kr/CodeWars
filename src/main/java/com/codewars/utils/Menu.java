@@ -5,6 +5,7 @@ public class Menu {
     private ConsoleScanner scanner;
 
     private Runnable[] difficultyEightMethods;
+    private Runnable[] difficultySevenMethods;
 
     public Menu() {
         runner = new Runner();
@@ -13,6 +14,10 @@ public class Menu {
         difficultyEightMethods = new Runnable[]{
                 runner::difficulty_8_getChar,
                 runner::difficulty_8_fakeBin
+        };
+
+        difficultySevenMethods = new Runnable[]{
+          runner::difficult_7_stringMerge
         };
 
     }
@@ -32,6 +37,12 @@ public class Menu {
         System.out.println("\n\t\t#Difficulty 8.\nSelect task:");
         System.out.print("\t1. Get character from ASCII Value\n" +
                 "\t2. Fake Binary\n" +
+                "\t0. Select another difficulty\n");
+    }
+
+    public void difficultySeven(){
+        System.out.println("\n\t\t#Difficulty 7.\nSelect task:");
+        System.out.print("\t1. String Merge!\n" +
                 "\t0. Select another difficulty\n");
     }
 
@@ -81,7 +92,18 @@ public class Menu {
                                 }
                                 break selectDifficulty;
                             case 7:
-                                break;
+                                difficultySeven();
+                                while (runTask(difficultySevenMethods)) {
+                                    System.out.print("Try another task? (Y or N)");
+                                    String answer = scanner.readString();
+                                    if ((answer.toUpperCase()).equals("N")) {
+                                        break;
+                                    } else {
+                                        difficultySeven();
+                                    }
+                                }
+                                break selectDifficulty;
+
                             case 0:
                                 break selectDifficulty;
                         }
