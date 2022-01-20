@@ -16,4 +16,9 @@ public class EigthImpl implements Eight {
         result = result.replaceAll("[56789]", "1");
         return result;
     }
+
+    @Override
+    public int doubleInteger(int i) {
+        return 2*i;
+    }
 }

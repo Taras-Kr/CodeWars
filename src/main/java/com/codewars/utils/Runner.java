@@ -28,6 +28,14 @@ public class Runner {
         System.out.println("Fake_Bin - " + eight.fakeBin(numbersString));
     }
 
+    public void difficult_8_doubleInteger(){
+        System.out.println("\n\t#Description:\n" + DOUBLE_INTEGER.getDetail());
+        System.out.print("Input integer: ");
+        int number = scanner.readInt();
+        eight = new EigthImpl();
+        System.out.println("Double integer - " + eight.doubleInteger(number));
+    }
+
     public void difficult_7_stringMerge(){
         System.out.println("\n\t#Description:\n" + STRING_MERGE.getDetail());
         System.out.print("Input first word: ");
@@ -38,7 +46,14 @@ public class Runner {
         char letter = scanner.readString().charAt(0);
         seven = new SevenImpl();
         System.out.println("Merged string - "+ seven.stringMerge(firstWord, secondWord, letter));
+    }
 
+    public void difficult_7_cost(){
+        System.out.println("\n\t#Description:\n" + COST.getDetail());
+        System.out.print("Input lesson duration in minutes: ");
+        int lessonDuration = scanner.readInt();
+        seven = new SevenImpl();
+        System.out.println("Lesson cost - " + seven.cost(lessonDuration) + "$");
     }
 
 
