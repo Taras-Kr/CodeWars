@@ -14,7 +14,8 @@ public class Menu {
         difficultyEightMethods = new Runnable[]{
                 runner::difficulty_8_getChar,
                 runner::difficulty_8_fakeBin,
-                runner::difficult_8_doubleInteger
+                runner::difficult_8_doubleInteger,
+                runner::difficult_8_multiply
         };
 
         difficultySevenMethods = new Runnable[]{
@@ -40,6 +41,7 @@ public class Menu {
         System.out.print("\t1. Get character from ASCII Value\n" +
                 "\t2. Fake Binary\n" +
                 "\t3. You Can't Code Under Pressure #1\n" +
+                "\t4. Function 3 - multiplying two numbers\n"+
                 "\t0. Select another difficulty\n");
     }
 
