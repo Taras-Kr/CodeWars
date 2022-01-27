@@ -88,6 +88,14 @@ public class Runner {
         System.out.println("Result: " + eight.repeatStr(repeat, string));
     }
 
+    public void difficult_8_reverse(){
+        System.out.println("\n\t#Description:\n" + REVERSED_STRING.getDetail() + "\nURl: " + REVERSED_STRING.getUrl());
+        System.out.print("Input string: ");
+        String string = scanner.readString();
+        eight = new EigthImpl();
+        System.out.println("Reversed string: " + eight.reverse(string));
+    }
+
     public void difficult_7_stringMerge(){
         System.out.println("\n\t#Description:\n" + STRING_MERGE.getDetail());
         System.out.print("Input first word: ");

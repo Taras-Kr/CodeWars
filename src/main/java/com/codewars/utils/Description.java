@@ -50,7 +50,9 @@ public enum Description {
             "\n" +
             "Write a code that gives out the total amount for different days(d).", "8","https://www.codewars.com/kata/transportation-on-vacation/"),
     REPEAT_STR("String repeatStr(final int repeat, final String string)", "Write a function called repeatStr\n" +
-            "which repeats the given string string exactly n times.", "8", "https://www.codewars.com/kata/string-repeat");
+            "which repeats the given string string exactly n times.", "8", "https://www.codewars.com/kata/string-repeat"),
+    REVERSED_STRING("string reverseString(String str)", "Complete the solution so that it reverses the string passed into it.",
+            "8", "https://www.codewars.com/kata/reversed-strings");
 
 
     @Getter

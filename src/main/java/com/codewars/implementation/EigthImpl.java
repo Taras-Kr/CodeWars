@@ -60,4 +60,10 @@ public class EigthImpl implements Eight {
         }
         return result;
     }
+
+    @Override
+    public String reverse(String str) {
+        StringBuilder reversedString = new StringBuilder(str);
+        return reversedString.reverse().toString();
+    }
 }
