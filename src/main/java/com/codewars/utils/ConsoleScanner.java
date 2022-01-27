@@ -18,7 +18,7 @@ public class ConsoleScanner implements Scanner{
     public String readString() {
         while (true) {
             if (sc.hasNext()) {
-                return sc.next();
+                return sc.nextLine();
             } else {
                 System.out.println("Bad string! Try again.");
             }

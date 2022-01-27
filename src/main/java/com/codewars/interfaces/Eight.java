@@ -10,6 +10,7 @@ public interface Eight {
     boolean isDivisible(long n, long x, long y);
     int rentalCarCost(int d);
     String repeatStr(final int repeat, final String string);
+    String reverse(String str);
 
 
 }
