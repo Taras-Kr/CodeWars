@@ -6,4 +6,10 @@ public interface Eight {
     String fakeBin(String numberString);
     int doubleInteger(int i);
     int multiply(int num1, int num2);
+    int opposite(int number);
+    boolean isDivisible(long n, long x, long y);
+    int rentalCarCost(int d);
+    String repeatStr(final int repeat, final String string);
+
+
 }

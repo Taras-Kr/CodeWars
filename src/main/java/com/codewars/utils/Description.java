@@ -33,7 +33,24 @@ public enum Description {
             "a lesson for 65 minutes or 1 hr 35 mins, he will only have to pay for an hour or 1hr 30 minutes respectively.\n" +
             "\n" +
             "For a given lesson time in minutes (min) , write a function cost to calculate how much the lesson costs.\n" +
-            "Input is always > 0.","7","https://www.codewars.com/kata/589b1c15081bcbfe6700017a/train/java");
+            "Input is always > 0.","7","https://www.codewars.com/kata/589b1c15081bcbfe6700017a/train/java"),
+    OPPOSITE("int opposite(int number)", "Very simple, given an integer or a floating-point number, find its opposite.",
+            "8" ,"https://www.codewars.com/kata/opposite-number/"),
+    IS_DIVISIBLE("boolean isDivisible(long n, long x, long y)", "Create a function that checks\n" +
+            "if a number n is divisible by two numbers x AND y.\n" +
+            "All inputs are positive, non-zero digits.","8", "https://www.codewars.com/kata/is-n-divisible-by-x-and-y"),
+    RENTAL_CAR_COST("int rentalCarCost(int d)", "After a hard quarter in the office you decide to get some rest on a vacation.\n" +
+            "So you will book a flight for you and your girlfriend and try to leave all the mess behind you.\n" +
+            "\n" +
+            "You will need a rental car in order for you to get around in your vacation. The manager of the car\n" +
+            "rental makes you some good offers.\n" +
+            "\n" +
+            "Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.\n" +
+            "Alternatively, if you rent the car for 3 or more days, you get $20 off your total.\n" +
+            "\n" +
+            "Write a code that gives out the total amount for different days(d).", "8","https://www.codewars.com/kata/transportation-on-vacation/"),
+    REPEAT_STR("String repeatStr(final int repeat, final String string)", "Write a function called repeatStr\n" +
+            "which repeats the given string string exactly n times.", "8", "https://www.codewars.com/kata/string-repeat");
 
 
     @Getter

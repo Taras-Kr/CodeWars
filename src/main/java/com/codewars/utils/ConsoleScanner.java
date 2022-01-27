@@ -24,4 +24,16 @@ public class ConsoleScanner implements Scanner{
             }
         }
     }
+
+    @Override
+    public Long readLong() {
+        while(true){
+            if(sc.hasNextLong()){
+                return sc.nextLong();
+            }else{
+                System.out.println("Bad Long value! Try again.");
+            }
+        }
+
+    }
 }

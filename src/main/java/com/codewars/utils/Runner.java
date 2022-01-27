@@ -46,6 +46,48 @@ public class Runner {
         System.out.println("Multiply numbers - " + eight.multiply(number1, number2));
     }
 
+    public void difficult_8_opposite() {
+        System.out.println("\n\t#Description:\n" + OPPOSITE.getDetail());
+        System.out.print("Input integer number: ");
+        int number = scanner.readInt();
+        eight = new EigthImpl();
+        System.out.println("Opposite to " + number + " - " + eight.opposite(number));
+    }
+
+    public void difficult_8_isDivisible() {
+        System.out.println("\n\t#Description:\n" + IS_DIVISIBLE.getDetail());
+        System.out.print("Input number for check: ");
+        long number = scanner.readLong();
+        System.out.print("Input first number: ");
+        long firstNumber = scanner.readLong();
+        System.out.print("Input second number: ");
+        long secondNumber = scanner.readLong();
+        eight = new EigthImpl();
+        if (eight.isDivisible(number, firstNumber, secondNumber)) {
+            System.out.println(number + " IS divisible by " + firstNumber + " and " + secondNumber);
+        } else {
+            System.out.println(number + " IS NOT divisible by " + firstNumber + " and " + secondNumber);
+        }
+    }
+
+    public void difficult_8_rentalCarCost() {
+        System.out.println("\n\t#Description:\n" + RENTAL_CAR_COST.getDetail());
+        System.out.print("Input amount days: ");
+        int day = scanner.readInt();
+        eight = new EigthImpl();
+        System.out.println("Total rental car cost - " + eight.rentalCarCost(day));
+    }
+
+    public void difficult_8_repeatStr() {
+        System.out.println("\n\t#Description:\n" + REPEAT_STR.getDetail() + "\nURl: " + REPEAT_STR.getUrl());
+        System.out.print("Input integer number: ");
+        int repeat = scanner.readInt();
+        System.out.print("Input string: ");
+        String string = scanner.readString();
+        eight = new EigthImpl();
+        System.out.println("Result: " + eight.repeatStr(repeat, string));
+    }
+
     public void difficult_7_stringMerge(){
         System.out.println("\n\t#Description:\n" + STRING_MERGE.getDetail());
         System.out.print("Input first word: ");
