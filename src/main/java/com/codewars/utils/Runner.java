@@ -117,11 +117,20 @@ public class Runner {
 
     public void difficult_8_map(){
         System.out.println("\n\t#Description:\n" + MAP.getDetail() + "\nURl: " + MAP.getUrl());
-        //int [] array = scanner.readIntArray();
         eight = new EigthImpl();
-       // int [] resultArray = eight.map(scanner.readIntArray());
         System.out.println("New array with each value doubled: "+ Arrays.toString(eight.map(scanner.readIntArray())) );
+    }
 
+    public void difficult_8_sayHello(){
+        System.out.println("\n\t#Description:\n" + SAY_HELLO.getDetail() + "\nURl: " + SAY_HELLO.getUrl() + "\n");
+        eight = new EigthImpl();
+        System.out.println("Input array of names: ");
+        String[] name = scanner.readStringArray();
+        System.out.print("Input City: ");
+        String city = scanner.readString();
+        System.out.print("Input State: ");
+        String state = scanner.readString();
+        System.out.println(eight.sayHello(name, city, state));
     }
 
     public void difficult_7_stringMerge(){
