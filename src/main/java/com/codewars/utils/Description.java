@@ -52,7 +52,19 @@ public enum Description {
     REPEAT_STR("String repeatStr(final int repeat, final String string)", "Write a function called repeatStr\n" +
             "which repeats the given string string exactly n times.", "8", "https://www.codewars.com/kata/string-repeat"),
     REVERSED_STRING("string reverseString(String str)", "Complete the solution so that it reverses the string passed into it.",
-            "8", "https://www.codewars.com/kata/reversed-strings");
+            "8", "https://www.codewars.com/kata/reversed-strings"),
+    CENTURY("int century(int number)", "Introduction\n" +
+            "The first century spans from the year 1 up to and including the year 100,\n" +
+            "the second century - from the year 101 up to and including the year 200, etc.\n" +
+            "\n" +
+            "Task\n" +
+            "Given a year, return the century it is in.\n" +
+            "\n" +
+            "Examples\n" +
+            "1705 --> 18\n" +
+            "1900 --> 19\n" +
+            "1601 --> 17\n" +
+            "2000 --> 20", "8", "https://www.codewars.com/kata/century-from-year");
 
 
     @Getter

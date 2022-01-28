@@ -66,4 +66,9 @@ public class EigthImpl implements Eight {
         StringBuilder reversedString = new StringBuilder(str);
         return reversedString.reverse().toString();
     }
+
+    @Override
+    public int century(int number) {
+        return number % 100 == 0 ? number / 100 : number/100 + 1;
+    }
 }
