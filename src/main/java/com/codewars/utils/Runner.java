@@ -104,6 +104,15 @@ public class Runner {
         System.out.println("Century: " + eight.century(year));
     }
 
+    public void difficult_8_convert(){
+        System.out.println("\n\t#Description:\n" + BOOLEAN_TO_STRING.getDetail() + "\nURl: " + BOOLEAN_TO_STRING.getUrl());
+        System.out.print("Input boolean(true/false): ");
+        boolean b = scanner.readBoolean();
+        eight = new EigthImpl();
+        System.out.println("String representation of Boolean: " + eight.convert(b));
+
+    }
+
     public void difficult_7_stringMerge(){
         System.out.println("\n\t#Description:\n" + STRING_MERGE.getDetail());
         System.out.print("Input first word: ");
