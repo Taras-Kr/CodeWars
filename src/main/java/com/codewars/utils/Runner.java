@@ -91,7 +91,7 @@ public class Runner {
     public void difficult_8_reverse(){
         System.out.println("\n\t#Description:\n" + REVERSED_STRING.getDetail() + "\nURl: " + REVERSED_STRING.getUrl());
         System.out.print("Input string: ");
-        String string = scanner.readString();
+        String string = scanner.readStringLine();
         eight = new EigthImpl();
         System.out.println("Reversed string: " + eight.reverse(string));
     }
