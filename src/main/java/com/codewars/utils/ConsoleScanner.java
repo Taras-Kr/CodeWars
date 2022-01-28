@@ -40,7 +40,7 @@ public class ConsoleScanner implements Scanner{
     @Override
     public String readStringLine() {
         while(true){
-            if(sc.hasNextLine()){
+            if(sc.hasNext()){
                 return sc.nextLine();
             }else{
                 System.out.print("Bad String Line. Try again: ");
@@ -82,6 +82,19 @@ public class ConsoleScanner implements Scanner{
         for (int i = 0; i < arraySize; i++) {
             System.out.print("\tInput array element[" + i + "] : ");
             array[i] = readInt();
+        }
+        return array;
+    }
+
+    @Override
+    public String[] readStringArray() {
+        System.out.print("Input array size: ");
+        int arraySize = readInt();
+        String[] array = new String[arraySize];
+        System.out.println("Input array elements: ");
+        for (int i = 0; i < arraySize; i++) {
+            System.out.print("\tInput array element[" + i + "] : ");
+            array[i] = readString();
         }
         return array;
     }

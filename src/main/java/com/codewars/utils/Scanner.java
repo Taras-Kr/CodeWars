@@ -7,4 +7,5 @@ public interface Scanner {
     String readStringLine();
     boolean readBoolean();
     int[] readIntArray();
+    String [] readStringArray();
 }

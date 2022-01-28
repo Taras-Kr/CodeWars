@@ -14,6 +14,7 @@ public interface Eight {
     int century(int number);
     String convert(boolean b);
     int[] map(int[] arr);
+    String sayHello(String [] name, String city, String state);
 
 
 }

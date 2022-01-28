@@ -23,7 +23,8 @@ public class Menu {
                 runner::difficult_8_reverse,
                 runner::difficult_8_century,
                 runner::difficult_8_convert,
-                runner::difficult_8_map
+                runner::difficult_8_map,
+                runner::difficult_8_sayHello
         };
 
         difficultySevenMethods = new Runnable[]{
@@ -58,6 +59,7 @@ public class Menu {
                 "\t10. Century From Year\n" +
                 "\t11. Convert a Boolean to a String\n" +
                 "\t12. Beginner - Lost Without a Map\n" +
+                "\t13. Welcome to the City\n" +
                 "\t0. Select another difficulty\n");
     }
 

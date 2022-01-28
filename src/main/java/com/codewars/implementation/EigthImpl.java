@@ -84,11 +84,23 @@ public class EigthImpl implements Eight {
         return Arrays.stream(arr).map(x -> 2 * x).toArray();
 
         //Alternative implementation
-
 //        int[] resArr = arr;
 //        for (int i = 0; i < arr.length; i++) {
 //            resArr[i] = 2 * resArr[i];
 //        }
 //        return resArr;
+    }
+
+    @Override
+    public String sayHello(String[] name, String city, String state) {
+        return String.format("Hello, %s! Welcome to %s, %s!", String.join(" ", name), city, state);
+
+        //Alternative implementation
+//        String fullName = "";
+//        for (String n : name) {
+//            fullName += n + " ";
+//        }
+//        fullName = fullName.trim();
+//        return String.format("Hello, %s! Welcome to %s, %s!", fullName, city, state);
     }
 }
