@@ -2,6 +2,8 @@ package com.codewars.implementation;
 
 import com.codewars.interfaces.Eight;
 
+import java.util.Arrays;
+
 public class EigthImpl implements Eight {
 
     @Override
@@ -75,5 +77,18 @@ public class EigthImpl implements Eight {
     @Override
     public String convert(boolean b) {
         return b == true ? "true" : "false";
+    }
+
+    @Override
+    public int[] map(int[] arr) {
+        return Arrays.stream(arr).map(x -> 2 * x).toArray();
+
+        //Alternative implementation
+
+//        int[] resArr = arr;
+//        for (int i = 0; i < arr.length; i++) {
+//            resArr[i] = 2 * resArr[i];
+//        }
+//        return resArr;
     }
 }

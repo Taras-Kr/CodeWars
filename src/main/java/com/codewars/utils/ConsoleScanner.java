@@ -9,7 +9,7 @@ public class ConsoleScanner implements Scanner{
             if (sc.hasNextInt()) {
                 return sc.nextInt();
             } else {
-                System.out.println("Bad integer number! Try again.");
+                System.out.print("Bad integer number! Try again: ");
                 sc.next();
             }
         }
@@ -71,6 +71,19 @@ public class ConsoleScanner implements Scanner{
                 sc.nextLine();
             }
         }
+    }
+
+    @Override
+    public int[] readIntArray() {
+        System.out.print("Input array size: ");
+        int arraySize = readInt();
+        int[] array = new int[arraySize];
+        System.out.println("Input array elements: ");
+        for (int i = 0; i < arraySize; i++) {
+            System.out.print("\tInput array element[" + i + "] : ");
+            array[i] = readInt();
+        }
+        return array;
     }
 
 }

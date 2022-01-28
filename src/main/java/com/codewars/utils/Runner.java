@@ -5,6 +5,8 @@ import com.codewars.implementation.SevenImpl;
 import com.codewars.interfaces.Eight;
 import com.codewars.interfaces.Seven;
 
+import java.util.Arrays;
+
 import static com.codewars.utils.Description.*;
 
 public class Runner {
@@ -110,6 +112,15 @@ public class Runner {
         boolean b = scanner.readBoolean();
         eight = new EigthImpl();
         System.out.println("String representation of Boolean: " + eight.convert(b));
+
+    }
+
+    public void difficult_8_map(){
+        System.out.println("\n\t#Description:\n" + MAP.getDetail() + "\nURl: " + MAP.getUrl());
+        //int [] array = scanner.readIntArray();
+        eight = new EigthImpl();
+       // int [] resultArray = eight.map(scanner.readIntArray());
+        System.out.println("New array with each value doubled: "+ Arrays.toString(eight.map(scanner.readIntArray())) );
 
     }
 

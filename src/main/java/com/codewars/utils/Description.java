@@ -65,9 +65,14 @@ public enum Description {
             "1900 --> 19\n" +
             "1601 --> 17\n" +
             "2000 --> 20", "8", "https://www.codewars.com/kata/century-from-year"),
-    BOOLEAN_TO_STRING("String convert(boolean b)", "Implement a function which convert the given boolean value into its string representation.\n" +
+    BOOLEAN_TO_STRING("String convert(boolean b)", "Implement a function which convert the given\n" +
+            "boolean value into its string representation.\n" +
             "\n" +
-            "Note: Only valid inputs will be given.", "8", "https://www.codewars.com/kata/convert-a-boolean-to-a-string/");
+            "Note: Only valid inputs will be given.", "8", "https://www.codewars.com/kata/convert-a-boolean-to-a-string/"),
+    MAP("int[] map(int[] arr)", "Given an array of integers, return a new array with each value doubled.\n" +
+            "\n" +
+            "For example:\n" +
+            "[1, 2, 3] --> [2, 4, 6]", "8", "https://www.codewars.com/kata/beginner-lost-without-a-map/");
 
 
     @Getter
