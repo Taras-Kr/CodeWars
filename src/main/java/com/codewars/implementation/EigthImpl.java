@@ -71,4 +71,9 @@ public class EigthImpl implements Eight {
     public int century(int number) {
         return number % 100 == 0 ? number / 100 : number/100 + 1;
     }
+
+    @Override
+    public String convert(boolean b) {
+        return b == true ? "true" : "false";
+    }
 }

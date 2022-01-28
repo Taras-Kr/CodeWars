@@ -5,4 +5,5 @@ public interface Scanner {
     String readString();
     Long readLong();
     String readStringLine();
+    boolean readBoolean();
 }

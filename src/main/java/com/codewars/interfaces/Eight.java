@@ -12,6 +12,7 @@ public interface Eight {
     String repeatStr(final int repeat, final String string);
     String reverse(String str);
     int century(int number);
+    String convert(boolean b);
 
 
 }

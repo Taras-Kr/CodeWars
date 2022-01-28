@@ -50,4 +50,27 @@ public class ConsoleScanner implements Scanner{
 
 
 }
+
+    @Override
+    public boolean readBoolean() {
+        String inputBoolean;
+        while (true) {
+            if (sc.hasNext()) {
+                inputBoolean = sc.next().toLowerCase();
+                if (inputBoolean.equals("true")) {
+                    return true;
+                }
+                if (inputBoolean.equals("false")) {
+                    return false;
+                } else {
+                    System.out.print("Bad boolean. Try again:");
+                    sc.nextLine();
+                }
+            } else {
+                System.out.print("Bad boolean. Try again:");
+                sc.nextLine();
+            }
+        }
+    }
+
 }

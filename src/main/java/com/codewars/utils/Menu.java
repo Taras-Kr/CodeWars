@@ -21,7 +21,8 @@ public class Menu {
                 runner::difficult_8_rentalCarCost,
                 runner::difficult_8_repeatStr,
                 runner::difficult_8_reverse,
-                runner::difficult_8_century
+                runner::difficult_8_century,
+                runner::difficult_8_convert
         };
 
         difficultySevenMethods = new Runnable[]{
@@ -54,6 +55,7 @@ public class Menu {
                 "\t8. String repeat\n" +
                 "\t9. Reversed String\n" +
                 "\t10. Century From Year\n" +
+                "\t11. Convert a Boolean to a String\n" +
                 "\t0. Select another difficulty\n");
     }
 
