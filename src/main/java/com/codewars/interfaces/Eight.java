@@ -11,6 +11,7 @@ public interface Eight {
     int rentalCarCost(int d);
     String repeatStr(final int repeat, final String string);
     String reverse(String str);
+    int century(int number);
 
 
 }

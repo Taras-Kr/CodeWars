@@ -96,6 +96,14 @@ public class Runner {
         System.out.println("Reversed string: " + eight.reverse(string));
     }
 
+    public void difficult_8_century(){
+        System.out.println("\n\t#Description:\n" + CENTURY.getDetail() + "\nURl: " + CENTURY.getUrl());
+        System.out.print("Input year: ");
+        int year = scanner.readInt();
+        eight = new EigthImpl();
+        System.out.println("Century: " + eight.century(year));
+    }
+
     public void difficult_7_stringMerge(){
         System.out.println("\n\t#Description:\n" + STRING_MERGE.getDetail());
         System.out.print("Input first word: ");
