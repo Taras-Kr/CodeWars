@@ -13,6 +13,7 @@ public interface Eight {
     String reverse(String str);
     int century(int number);
     String convert(boolean b);
+    int[] map(int[] arr);
 
 
 }

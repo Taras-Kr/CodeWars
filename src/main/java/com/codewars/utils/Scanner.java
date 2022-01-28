@@ -6,4 +6,5 @@ public interface Scanner {
     Long readLong();
     String readStringLine();
     boolean readBoolean();
+    int[] readIntArray();
 }
