@@ -4,7 +4,7 @@ import com.codewars.interfaces.Eight;
 
 import java.util.Arrays;
 
-public class EigthImpl implements Eight {
+public class EightImpl implements Eight {
 
     @Override
     public char getChar(int c) {
