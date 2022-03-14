@@ -51,4 +51,13 @@ public class EightDataProvider {
                 {10, 350}
         };
     }
+
+    @DataProvider(name = "dpRepeatStr")
+    public Object[][] dpRepeatStr(){
+        return new Object[][]{
+                {1, "a", "a"},
+                {2, "a","aa"},
+                {3, "repeatString", "repeatStringrepeatStringrepeatString"}
+        };
+    }
 }
