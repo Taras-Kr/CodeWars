@@ -48,4 +48,9 @@ public class EightTest extends EightDataProvider {
     public void testIsDivisibleFalse(long number, long divOne, long divTwo) {
        Assert.assertFalse(eight.isDivisible(number, divOne, divTwo));
     }
+
+    @Test(dataProvider = "dpRentalCarCost")
+    public void testRentalCarCost(int day, int expected){
+       Assert.assertEquals(eight.rentalCarCost(day), expected);
+    }
 }

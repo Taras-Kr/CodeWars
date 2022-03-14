@@ -39,5 +39,16 @@ public class EightDataProvider {
         return new Object[][]{{2, 6, 2}, {20, -3, 4}};
     }
 
-
+    @DataProvider(name ="dpRentalCarCost")
+    public Object[][] dpRentalCarCost() {
+        return new Object[][]{
+                {0, 0},
+                {1, 40},
+                {2, 80},
+                {3, 100},
+                {6, 220},
+                {7, 230},
+                {10, 350}
+        };
+    }
 }
