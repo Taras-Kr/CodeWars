@@ -21,4 +21,31 @@ public class EightTest extends EightDataProvider {
         Assert.assertEquals(actual, expected);
     }
 
+    @Test(dataProvider = "dpDoubleInteger")
+    public void testDoubleInteger(int number, int expected){
+        int actual = eight.doubleInteger(number);
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test(dataProvider = "dpMultiply")
+    public void testMultiply(int numberOne, int numberTwo, int expected){
+        int actual = eight.multiply(numberOne, numberTwo);
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test(dataProvider = "dpOpposite")
+    public void testOpposite(int number, int expected){
+        int actual = eight.opposite(number);
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test(dataProvider = "dpIsDivisibleTrue")
+    public void testIsDivisibleTrue(long number, long divOne, long divTwo) {
+           Assert.assertTrue(eight.isDivisible(number, divOne, divTwo));
+    }
+
+    @Test(dataProvider = "dpIsDivisibleFalse")
+    public void testIsDivisibleFalse(long number, long divOne, long divTwo) {
+       Assert.assertFalse(eight.isDivisible(number, divOne, divTwo));
+    }
 }
