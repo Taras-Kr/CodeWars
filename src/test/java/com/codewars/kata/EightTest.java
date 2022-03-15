@@ -51,6 +51,11 @@ public class EightTest extends EightDataProvider {
 
     @Test(dataProvider = "dpRentalCarCost")
     public void testRentalCarCost(int day, int expected){
-       Assert.assertEquals(eight.rentalCarCost(day), expected);
+        Assert.assertEquals(eight.rentalCarCost(day), expected);
+    }
+
+    @Test(dataProvider = "dpRepeatStr")
+    public void testRepeatStr(int repeat, String string, String expected) {
+        Assert.assertEquals(eight.repeatStr(repeat, string), expected);
     }
 }
