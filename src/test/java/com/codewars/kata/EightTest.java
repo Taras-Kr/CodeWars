@@ -58,4 +58,29 @@ public class EightTest extends EightDataProvider {
     public void testRepeatStr(int repeat, String string, String expected) {
         Assert.assertEquals(eight.repeatStr(repeat, string), expected);
     }
+
+    @Test(dataProvider = "dpReverse")
+    public void testReverse(String string, String expected) {
+        Assert.assertEquals(eight.reverse(string), expected);
+    }
+
+    @Test(dataProvider = "dpCentury")
+    public void testCentury(int year, int expected) {
+        Assert.assertEquals(eight.century(year), expected);
+    }
+
+    @Test(dataProvider = "dpConvert")
+    public void testConvert(boolean value, String expected){
+        Assert.assertEquals(eight.convert(value), expected);
+    }
+
+    @Test(dataProvider = "dpMap")
+    public void testMap(int[] array, int[] expected) {
+        Assert.assertEquals(eight.map(array), expected);
+    }
+
+    @Test(dataProvider = "dpSayHello")
+    public void testSayHello(String[] name, String city, String state, String expected){
+        Assert.assertEquals(eight.sayHello(name, city, state), expected);
+    }
 }

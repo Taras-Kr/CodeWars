@@ -60,4 +60,47 @@ public class EightDataProvider {
                 {3, "repeatString", "repeatStringrepeatStringrepeatString"}
         };
     }
+
+    @DataProvider(name = "dpReverse")
+    public Object[][] dpReverse(){
+        return new Object[][]{
+                {"a","a"},
+                {"ab", "ba"},
+                {"Reverse String", "gnirtS esreveR"}
+        };
+    }
+
+    @DataProvider(name = "dpCentury")
+    public Object[][] dpCentury() {
+        return new Object[][]{
+                {1, 1},
+                {200, 2},
+                {1801, 19},
+                {2022, 21}
+        };
+    }
+
+    @DataProvider(name = "dpConvert")
+    public Object[][] dpConvert() {
+        return new Object[][]{
+                {true, "true"},
+                {false, "false"}
+        };
+    }
+
+    @DataProvider(name = "dpMap")
+    public Object[][] dpMap() {
+        return new Object[][]{
+                {new int[]{0}, new int[]{0}},
+                {new int[]{1, 2, 3}, new int[]{2, 4, 6}}
+        };
+    }
+
+    @DataProvider(name = "dpSayHello")
+    public Object[][] dpSayHello(){
+        return new Object[][]{
+                {new String[]{"John"}, "Phoenix", "Arizona", "Hello, John! Welcome to Phoenix, Arizona!"},
+                {new String[]{"John", "Smith"}, "Phoenix", "Arizona", "Hello, John Smith! Welcome to Phoenix, Arizona!"}
+        };
+    }
 }
