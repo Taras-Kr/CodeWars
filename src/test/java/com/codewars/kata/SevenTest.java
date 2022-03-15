@@ -13,4 +13,9 @@ public class SevenTest extends SevenDataProvider{
     public void testStringMerge(String wordOne, String wordTwo, char letter, String expected){
         Assert.assertEquals(seven.stringMerge(wordOne, wordTwo,letter), expected);
     }
+
+    @Test(dataProvider = "dpCost")
+    public void testCost(int time, int expected){
+        Assert.assertEquals(seven.cost(time), expected);
+    }
 }
