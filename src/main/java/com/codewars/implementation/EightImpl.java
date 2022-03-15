@@ -42,7 +42,7 @@ public class EightImpl implements Eight {
     @Override
     public int rentalCarCost(int d) {
         int rentalCost = 40 * d;
-        if (d >= 0 && d < 3) {
+        if (d >= 1 && d < 3) {
             return rentalCost;
         }
         if (d >= 3 && d < 7) {
