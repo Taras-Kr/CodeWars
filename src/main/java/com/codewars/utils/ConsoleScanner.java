@@ -34,22 +34,19 @@ public class ConsoleScanner implements Scanner{
                 sc.next();
             }
         }
-
     }
 
     @Override
     public String readStringLine() {
-        while(true){
-            if(sc.hasNext()){
+        while (true) {
+            if (sc.hasNext()) {
                 return sc.nextLine();
-            }else{
+            } else {
                 System.out.print("Bad String Line. Try again: ");
                 sc.next();
             }
+        }
     }
-
-
-}
 
     @Override
     public boolean readBoolean() {
