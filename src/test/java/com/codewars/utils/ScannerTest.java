@@ -2,7 +2,6 @@ package com.codewars.utils;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import sun.java2d.pipe.AAShapePipe;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -61,4 +60,27 @@ public class ScannerTest extends ScannerDataProvider{
         String actualMessage = outputStream.toString().replaceAll("\r\n","");
         Assert.assertEquals(actualMessage, expectedMessage);
     }
+
+    @Test(dataProvider = "dpReadValidBoolean")
+    public void testReadValidBoolean(String inputBoolean, boolean expected) {
+        InputStream inputStream = new ByteArrayInputStream(inputBoolean.getBytes());
+        System.setIn(inputStream);
+        ConsoleScanner consoleScanner = new ConsoleScanner();
+        boolean actual = consoleScanner.readBoolean();
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test(dataProvider = "dpReadInvalidBoolean")
+    public void testReadInvalidBoolean(String inputBoolean, String expectedMessage) {
+        InputStream inputStream = new ByteArrayInputStream(inputBoolean.getBytes());
+        System.setIn(inputStream);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        ConsoleScanner consoleScanner = new ConsoleScanner();
+        consoleScanner.readBoolean();
+        String actualMessage = outputStream.toString();
+        Assert.assertEquals(actualMessage, expectedMessage);
+    }
 }
+
+

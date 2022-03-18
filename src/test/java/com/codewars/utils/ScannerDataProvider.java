@@ -46,4 +46,26 @@ public class ScannerDataProvider {
                 {"9223372036854775808\n1", "Bad Long value! Try again."}
         };
     }
+
+    @DataProvider (name = "dpReadValidBoolean")
+    public Object[][] dpReadValidBoolean(){
+        return new Object[][]{
+                {"true", true},
+                {"True",true},
+                {"TRUE",true},
+                {"false",false},
+                {"False",false},
+                {"FALSE",false}
+        };
+    }
+
+    @DataProvider(name = "dpReadInvalidBoolean")
+    public Object[][] dpReadInvalidBoolean() {
+        return new Object[][]{
+                {"Tru\nTrue", "Bad boolean. Try again:"},
+                {"Falsa\nTrue", "Bad boolean. Try again:"},
+                {"1\nTrue", "Bad boolean. Try again:"},
+                {"0\nTrue", "Bad boolean. Try again:"}
+        };
+    }
 }
