@@ -2,6 +2,7 @@ package com.codewars.utils;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import sun.java2d.pipe.AAShapePipe;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -29,5 +30,35 @@ public class ScannerTest extends ScannerDataProvider{
         scanner.readInt();
         String actual = outputStream.toString();
         Assert.assertEquals(actual, expected);
+    }
+
+    @Test (dataProvider = "dpReadString")
+    public void testReadString(String inputString, String expected) {
+        InputStream inputStream = new ByteArrayInputStream(inputString.getBytes());
+        System.setIn(inputStream);
+        ConsoleScanner consoleScanner = new ConsoleScanner();
+        String actual = consoleScanner.readString();
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test(dataProvider = "dpReadValidLong")
+    public void testReadValidLong(String inputLong, long expectedLong){
+        InputStream inputStream  = new ByteArrayInputStream(inputLong.getBytes());
+        System.setIn(inputStream);
+        ConsoleScanner consoleScanner = new ConsoleScanner();
+        long actualLong = consoleScanner.readLong();
+        Assert.assertEquals(actualLong, expectedLong);
+    }
+
+    @Test(dataProvider = "dpReadInvalidLong")
+    public void testReadInvalidLong(String inputLong, String expectedMessage) {
+        InputStream inputStream = new ByteArrayInputStream(inputLong.getBytes());
+        System.setIn(inputStream);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        ConsoleScanner consoleScanner = new ConsoleScanner();
+        consoleScanner.readLong();
+        String actualMessage = outputStream.toString().replaceAll("\r\n","");
+        Assert.assertEquals(actualMessage, expectedMessage);
     }
 }
