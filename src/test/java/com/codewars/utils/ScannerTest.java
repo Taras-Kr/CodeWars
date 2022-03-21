@@ -81,6 +81,22 @@ public class ScannerTest extends ScannerDataProvider{
         String actualMessage = outputStream.toString();
         Assert.assertEquals(actualMessage, expectedMessage);
     }
+
+    @Test(dataProvider = "dpReadValidIntArray")
+    public void testReadValidIntArray(String inputArray, int [] expected){
+        InputStream inputStream = new ByteArrayInputStream(inputArray.getBytes());
+        System.setIn(inputStream);
+        ConsoleScanner consoleScanner = new ConsoleScanner();
+        Assert.assertEquals(consoleScanner.readIntArray(), expected);
+    }
+
+    @Test(dataProvider = "dpReadValidStringArray")
+    public void testReadValidStringArray(String inputArray, String[] expected) {
+        InputStream inputStream = new ByteArrayInputStream(inputArray.getBytes());
+        System.setIn(inputStream);
+        ConsoleScanner consoleScanner = new ConsoleScanner();
+        Assert.assertEquals(consoleScanner.readStringArray(), expected);
+    }
 }
 
 

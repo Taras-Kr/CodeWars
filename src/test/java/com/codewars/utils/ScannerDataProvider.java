@@ -70,4 +70,20 @@ public class ScannerDataProvider {
 
         };
     }
+
+    @DataProvider(name = "dpReadValidIntArray")
+    public Object[][] dpReadValidIntArray() {
+        return new Object[][]{
+                {"5\n0\n1\n2\n3\n4", new int[]{0, 1, 2, 3, 4}},
+                {"1\n1", new int[]{1}}
+        };
+    }
+
+    @DataProvider(name = "dpReadValidStringArray")
+    public Object[][] dpReadValidStringArray() {
+        return new Object[][]{
+                {"1\nstring", new String[]{"string"}},
+                {"2\nstring\narray", new String[]{"string", "array"}}
+        };
+    }
 }
