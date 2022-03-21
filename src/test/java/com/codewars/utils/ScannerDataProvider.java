@@ -62,10 +62,12 @@ public class ScannerDataProvider {
     @DataProvider(name = "dpReadInvalidBoolean")
     public Object[][] dpReadInvalidBoolean() {
         return new Object[][]{
+                //{" \n", "Bad boolean. Try again:"}
                 {"Tru\nTrue", "Bad boolean. Try again:"},
                 {"Falsa\nTrue", "Bad boolean. Try again:"},
                 {"1\nTrue", "Bad boolean. Try again:"},
-                {"0\nTrue", "Bad boolean. Try again:"}
+                {"0\nFalse", "Bad boolean. Try again:"}
+
         };
     }
 }
